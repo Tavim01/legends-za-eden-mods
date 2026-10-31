@@ -24,6 +24,8 @@ The patches are tied to this exact build (`@nsobid` / the cheat file name). They
 
 Hold **R** (the Mega button) and the game's "gauge is full?" check passes, so you can Mega Evolve whenever you want; the gauge is spent normally afterwards, which keeps the HUD consistent. Hold **D-Pad Up** to zero the gauge and end the Mega immediately. It may also affect an opponent's Mega. Details in `docs/NOTES.md`.
 
+Demo video (90 s, 720p): [mega-energy-r-force-demo.mp4](https://github.com/Tavim01/legends-za-eden-mods/releases/download/v1.0/mega-energy-r-force-demo.mp4). Ready-to-use zip: [Releases](https://github.com/Tavim01/legends-za-eden-mods/releases/tag/v1.0).
+
 Credit: the idea of forcing the gauge check comes from the Mega Energy cheats by **OblivionReign** and **LaMano** in the GBAtemp "Pokémon Legends Z-A Cheat Database" thread. The code locations were re-derived for 2.0.2 and the branch encodings recomputed here.
 
 ## Tools
