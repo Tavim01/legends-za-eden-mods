@@ -1,0 +1,19 @@
+@nsobid-B1F12FD919EAE86AB8A978317677E64BCE443D1F
+
+# Pokemon Legends: Z-A [0100F43008C44000] v2.0.2 - Shiny Rate ~1/10, Shiny Charm ~1/5
+
+@flag print_values
+@flag offset_shift 0x100
+
+// Reroll count = 320 + 128*r   (r = game's roll count: 1 base, 4 with Shiny Charm)
+// 0x6570EC: mov w20,wzr          -> mov w20,#-320
+// 0x657134: cmp w20,w8           -> cmp w20,w8,lsl #7
+// 0x657138: b.lo loop            -> b.lt loop (signed)
+// 0x6570CC: b.eq 0x657140 (modo "nunca shiny"/rare travado) -> b.eq 0x6570E4 (cai no mesmo sorteio; com contagem de rolls 0 fica o PID natural. Nao testado se a Pokedex continua sem icones shiny)
+
+@enabled
+006570CC C0000054
+006570EC F4278012
+00657134 9F1E086B
+00657138 CBFDFF54
+@stop

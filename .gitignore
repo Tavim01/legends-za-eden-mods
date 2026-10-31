@@ -1,0 +1,12 @@
+*.nsp
+*.nca
+*.xci
+*.keys
+prod.keys
+title.keys
+*.pkl
+*.dll
+*.bin
+*.trpfd
+*.trpfs
+__pycache__/

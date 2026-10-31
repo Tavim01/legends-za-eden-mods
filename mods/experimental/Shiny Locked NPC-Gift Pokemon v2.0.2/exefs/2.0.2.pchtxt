@@ -1,0 +1,16 @@
+@nsobid-B1F12FD919EAE86AB8A978317677E64BCE443D1F
+
+# Pokemon Legends: Z-A [0100F43008C44000] v2.0.2 - Shiny-locked Pokemon created from data rows (NPC trainers, gifts, starters) become shiny. Pokedex/UI creators untouched.
+
+@flag print_values
+@flag offset_shift 0x100
+
+// 0x656150: ldrb w9,[x21,#0x14]  -> mov x9,#0x1ffffffff   (locked mode constant)
+// 0x656154: cmp w9,#0            -> cmp x8,x9              (is row mode == locked?)
+// 0x656160: csel x8,x8,x9,eq     -> csel x8,x9,x8,eq       (locked -> force-shiny constant already in x9)
+
+@enabled
+00656150 E98340B2
+00656154 1F0109EB
+00656160 2801889A
+@stop
